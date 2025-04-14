@@ -7,7 +7,7 @@ const userRoute = require("./route/user");
 const path = require("path");
 const connectDB = require("./config/db");
 
-connectDB();
+connectDB(); 
 
 app.use(express.json());
 app.use("/static", express.static(path.join(__dirname, "Static")));
