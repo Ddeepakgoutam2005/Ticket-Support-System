@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userTicketAPI = createApi({
   reducerPath: "userTicketAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/user",
+    baseUrl: "process.env.REACT_APP_API_BASE_URL",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().userInfoReducer.tokenId;
       if (token) headers.set("Authorization", `Bearer ${token}`);
