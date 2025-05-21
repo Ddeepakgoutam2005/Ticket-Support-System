@@ -7,6 +7,14 @@ const userRoute = require("./route/user");
 const path = require("path");
 const connectDB = require("./config/db");
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://ticket-support-system-1-ga8d.onrender.com',
+  credentials: true,
+}));
+
+
 connectDB(); 
 
 app.use(express.json());
